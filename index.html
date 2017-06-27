@@ -9,15 +9,34 @@
   <body>
 
     <main class="container-fluid">
+
+      <div class="row">
+        <div id="myModal"class="modal col-sm-12 col-md-12 col-lg-12">
+          <div class="modalStyle modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                Enter your name below
+              </div>
+              <div class="modal-body">
+                <input class="nameInput" autofocus=""type="text" name="" value="">
+              </div>
+              <div class="modal-footer">
+                <button class="submitName" type="button" name="button btn btn-default" data-dismiss='modal'>Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h3 class="col-sm-12 col-md-12">LETS PLAY GEOPARDY</h3>
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <p class="category col-sm-2">Category</p>
-            <p class="category col-sm-2">Category</p>
-            <p class="category col-sm-2">Category</p>
-            <p class="category col-sm-2">Category</p>
-            <p class="category col-sm-2">Category</p>
+            <p class="firstCategory category col-sm-2">Category</p>
+            <p class="secondCategory category col-sm-2">Category</p>
+            <p class="thirdCategory category col-sm-2">Category</p>
+            <p class="fourthCategory category col-sm-2">Category</p>
+            <p class="fifthCategory category col-sm-2">Category</p>
           </div>
         </div>
       </div>
@@ -79,10 +98,8 @@
       <div>
         <div class="infoRow row">
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <label class="col-sm-1 col-md-1 col-lg-1" for="answer">Answer</label>
-            <input class="col-sm-4 col-md-4 col-lg-4" type="text" name="" value="">
-            <label class="col-sm-1 col-md-1 col-lg-1" for="playerName">Player</label>
-            <input class="col-sm-2 col-md-2 col-lg-2"id="playerName"class="" type="text" name="" value="">
+            <label class="col-sm-1 col-md-1 col-lg-1" for="playerName">Player:</label>
+            <p id="player"class="col-sm-3 col-md-3 col-lg-3"></p>
             <label class="col-sm-2 col-md-2 col-lg-2"for="score">score</label>
             <p id="score"class="col-sm-1 col-md-1 col-lg-1">score</p>
           </div>
