@@ -1,7 +1,7 @@
 var $baseURL = "https://cors-anywhere.herokuapp.com/http://jservice.io/api/clues"
 var $category = "https://cors-anywhere.herokuapp.com/http://jservice.io/api/category?id="
 var answer = ''
-var score = ''
+var score = 0
 $(window).on('load',function(){
     $('#myModal').modal('show');
 });
@@ -28,7 +28,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catOneID + '&value' + $('.firstCategory100').text).then(function(data) {
             $('.modal-header').append(data[0].question)
-            score = data[0].value
+            score += data[0].value
             answer = data[0].answer
             console.log(answer);
           })
@@ -40,7 +40,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catOneID + '&value' + $('.firstCategory200').text).then(function(data) {
             $('.modal-header').append(data[1].question)
-            score = data[1].value
+            score += data[1].value
             answer = data[1].answer
             console.log(answer);
           })
@@ -52,7 +52,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catOneID + '&value' + $('.firstCategory300').text).then(function(data) {
             $('.modal-header').append(data[2].question)
-            score = data[2].value
+            score += data[2].value
             answer = data[2].answer
             console.log(answer);
           })
@@ -64,7 +64,7 @@ $(document).ready(function() {
           $(this).attr('disabled','disabled')
           $.get($baseURL + '?category=' + catOneID + '&value' + $('.firstCategory400').text).then(function(data) {
             $('.modal-header').append(data[3].question)
-            score = data[3].value
+            score += data[3].value
             answer = data[3].answer
             console.log(answer);
           })
@@ -76,7 +76,7 @@ $(document).ready(function() {
           $(this).attr('disabled','disabled')
           $.get($baseURL + '?category=' + catOneID + '&value' + $('.firstCategory500').text).then(function(data) {
             $('.modal-header').append(data[4].question)
-            score = data[4].value
+            score += data[4].value
             answer = data[4].answer
             console.log(answer);
           })
@@ -92,7 +92,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catTwoID + '&value' + $('.secondCategory100').text).then(function(data) {
             $('.modal-header').append(data[0].question)
-            score = data[0].value
+            score += data[0].value
             answer = data[0].answer
           })
       })
@@ -103,7 +103,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catTwoID + '&value' + $('.secondCategory200').text).then(function(data) {
             $('.modal-header').append(data[1].question)
-            score = data[1].value
+            score += data[1].value
             answer = data[1].answer
           })
       })
@@ -114,7 +114,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catTwoID + '&value' + $('.secondCategory300').text).then(function(data) {
             $('.modal-header').append(data[2].question)
-            score = data[2].value
+            score += data[2].value
             answer = data[2].answer
           })
       })
@@ -125,7 +125,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catTwoID + '&value' + $('.secondCategory400').text).then(function(data) {
             $('.modal-header').append(data[3].question)
-            score = data[3].value
+            score += data[3].value
             answer = data[3].answer
           })
       })
@@ -136,7 +136,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catTwoID + '&value' + $('.secondCategory500').text).then(function(data) {
             $('.modal-header').append(data[4].question)
-            score = data[4].value
+            score += data[4].value
             answer = data[4].answer
           })
       })
@@ -151,7 +151,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catThreeID + '&value' + $('.thirdCategory100').text).then(function(data) {
             $('.modal-header').append(data[0].question)
-            score = data[0].value
+            score += data[0].value
             answer = data[0].answer
           })
       })
@@ -162,7 +162,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catThreeID + '&value' + $('.thirdCategory200').text).then(function(data) {
             $('.modal-header').append(data[1].question)
-            score = data[1].value
+            score += data[1].value
             answer = data[1].answer
           })
       })
@@ -173,7 +173,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catThreeID + '&value' + $('.thirdCategory300').text).then(function(data) {
             $('.modal-header').append(data[2].question)
-            score = data[2].value
+            score += data[2].value
             answer = data[2].answer
           })
       })
@@ -184,7 +184,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catThreeID + '&value' + $('.thirdCategory400').text).then(function(data) {
             $('.modal-header').append(data[3].question)
-            score = data[3].value
+            score += data[3].value
             answer = data[3].answer
           })
       })
@@ -195,7 +195,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catThreeID + '&value' + $('.thirdCategory500').text).then(function(data) {
             $('.modal-header').append(data[4].question)
-            score = data[4].value
+            score += data[4].value
             answer = data[4].answer
           })
       })
@@ -210,7 +210,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catFourID + '&value' + $('.fourthCategory100').text).then(function(data) {
             $('.modal-header').append(data[0].question)
-            score = data[0].value
+            score += data[0].value
             answer = data[0].answer
           })
       })
@@ -221,7 +221,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catFourID + '&value' + $('.fourthCategory200').text).then(function(data) {
             $('.modal-header').append(data[1].question)
-            score = data[1].value
+            score += data[1].value
             answer = data[1].answer
           })
       })
@@ -232,7 +232,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catFourID + '&value' + $('.fourthCategory300').text).then(function(data) {
             $('.modal-header').append(data[2].question)
-            score = data[2].value
+            score += data[2].value
             answer = data[2].answer
           })
       })
@@ -243,7 +243,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catFourID + '&value' + $('.fourthCategory400').text).then(function(data) {
             $('.modal-header').append(data[3].question)
-            score = data[3].value
+            score += data[3].value
             answer = data[3].answer
           })
       })
@@ -254,7 +254,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catFourID + '&value' + $('.fourthCategory500').text).then(function(data) {
             $('.modal-header').append(data[4].question)
-            score = data[4].value
+            score += data[4].value
             answer = data[4].answer
           })
       })
@@ -269,8 +269,9 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catFiveID + '&value' + $('.fifthCategory100').text).then(function(data) {
             $('.modal-header').append(data[0].question)
-            score = data[0].value
+            score += data[0].value
             answer = data[0].answer
+            console.log(answer);
           })
       })
       $('.fifthCategory200').click(function (event) {
@@ -280,7 +281,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catFiveID + '&value' + $('.fifthCategory200').text).then(function(data) {
             $('.modal-header').append(data[1].question)
-            score = data[1].value
+            score += data[1].value
             answer = data[1].answer
           })
       })
@@ -291,7 +292,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catFiveID + '&value' + $('.fifthCategory300').text).then(function(data) {
             $('.modal-header').append(data[2].question)
-            score = data[2].value
+            score += data[2].value
             answer = data[2].answer
           })
       })
@@ -302,7 +303,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catFiveID + '&value' + $('.fifthCategory400').text).then(function(data) {
             $('.modal-header').append(data[3].question)
-            score = data[3].value
+            score += data[3].value
             answer = data[3].answer
           })
       })
@@ -313,7 +314,7 @@ $(document).ready(function() {
           $('#myAnswerModal').modal('show')
           $.get($baseURL + '?category=' + catFiveID + '&value' + $('.fifthCategory500').text).then(function(data) {
             $('.modal-header').append(data[4].question)
-            score = data[4].value
+            score += data[4].value
             answer = data[4].answer
           })
       })
@@ -325,7 +326,9 @@ $(document).ready(function() {
       var checkAnswer = answer.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').toLowerCase()
       if (playerAnswer == checkAnswer) {
         alert('Correct')
+        $('#score').text('')
         $('#score').append(score);
+
       } else {
         alert('Incorrect')
       }
